@@ -1,18 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+import { Menu } from 'semantic-ui-react'
+
 import './index.css';
-import NavBar from './components/NavBar'
-import Home from './Home'
-import Projects from './Projects'
-import notFound from './NotFound'
+
+import Home from './components/Home'
+import Projects from './components/Projects'
+import notFound from './components/NotFound'
 import * as serviceWorker from './serviceWorker';
 
 
 const routing = (
     <Router>
         <div>
-            <NavBar />
+            <Menu>
+                <Menu.Item>
+                    <Link to='/'>Home</Link>
+                </Menu.Item>
+                <Menu.Item>
+                    <Link to='/projects'>Projects</Link>
+                </Menu.Item>
+            </Menu>
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/projects' component={Projects} />
