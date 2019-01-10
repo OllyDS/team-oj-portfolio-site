@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 import './index.css';
+import NavBar from './components/NavBar'
 import Home from './Home'
 import Projects from './Projects'
 import notFound from './NotFound'
@@ -11,14 +12,7 @@ import * as serviceWorker from './serviceWorker';
 const routing = (
     <Router>
         <div>
-            <ul>
-                <li>
-                    <Link to='/'>Home</Link>
-                </li>
-                <li>
-                    <Link to='/projects'>Projects</Link>
-                </li>
-            </ul>
+            <NavBar />
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/projects' component={Projects} />
