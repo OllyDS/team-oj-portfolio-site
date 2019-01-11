@@ -15,11 +15,11 @@ const routing = (
     <Router>
         <div>
             <Menu>
-                <Menu.Item>
-                    <Link to='/'>Home</Link>
+                <Menu.Item as={Link} to='/'>
+                    Home
                 </Menu.Item>
-                <Menu.Item>
-                    <Link to='/projects'>Projects</Link>
+                <Menu.Item as={Link} to='/projects'>
+                    Projects
                 </Menu.Item>
             </Menu>
             <Switch>
